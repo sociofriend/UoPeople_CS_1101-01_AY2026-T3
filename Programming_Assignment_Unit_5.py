@@ -107,7 +107,7 @@ get_characters_from_left(safe_number, safe_name)
 print("\n")
 count_vowels(safe_name)
 
-# revers name and print it
+# reverse the name and print it
 print("\n")
 reverse_name(safe_name)
 # endregion

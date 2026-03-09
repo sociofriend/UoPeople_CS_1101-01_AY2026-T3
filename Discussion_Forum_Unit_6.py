@@ -1,15 +1,6 @@
 #Discussion Forum Unit 6
 
-"""
-Task 1. Use the terms "equivalent" and "identical" to distinguish between objects and values. Illustrate the difference further using your own examples with Python lists and the “is” operator.
-
-Task 2. Using your own Python list examples, explain how objects, references, and aliasing relate to one another.
-
-Task 3. Finally, create your own example of a function that modifies a list passed in as an argument. Hence, describe what your function does in terms of arguments, parameters, objects, and references.
-"""
-
-
-# Task 1. Use the terms "equivalent" and "identical" to distinguish between objects and values. Illustrate the difference further using your own examples with Python lists and the “is” operator.
+# region Task 1. Use the terms "equivalent" and "identical" to distinguish between objects and values. Illustrate the difference further using your own examples with Python lists and the “is” operator.
 
 # To demonstrate how equivalent and identical work, let's first create two string objects a and b and assign them the same value 'a'.
 # The demonstrate_equivalent_and_identical_for_values() function does this. Moreover, it returns the result of the "is" operation,
@@ -64,8 +55,9 @@ a == b; is equivalent  True
 demonstrate_equivalent_and_identical_for_values()
 demonstrate_equivalent_and_identical_for_lists()
 
+# endregion
 
-# Task 2. Using your own Python list examples, explain how objects, references, and aliasing relate to one another.
+# region Task 2. Using your own Python list examples, explain how objects, references, and aliasing relate to one another.
 
 """
 To explain how objects, references, and aliasing relate to one another, we first note that in Python everything is an object.
@@ -121,7 +113,7 @@ def demonstrate_object_reference_for_immutables_by_creating_new_objects():
     print("name3=", name3)
 
 
-demonstrate_object_reference_for_immutables_by_creating_new_objects()
+# demonstrate_object_reference_for_immutables_by_creating_new_objects()
 
 # Output:
 """
@@ -166,9 +158,9 @@ names1 == names2 True
 This example demonstrates aliasing. The variable names2 is assigned the same list object as names1. Therefore both variables refer to the same object in memory. When the list is modified through either variable, the change is visible through the other variable as well. When two variables refer to the same object, they are called aliases (Downey, 2015, p.97, section 10.10, para. 4).
 """
 
+# endregion
 
-
-# Task 3.  Finally, create your own example of a function that modifies a list passed in as an argument. Hence, describe what your function does in terms of arguments, parameters, objects, and references.
+# region Task 3.  Finally, create your own example of a function that modifies a list passed in as an argument. Hence, describe what your function does in terms of arguments, parameters, objects, and references.
 
 # the initial list which will be passed as an argument
 list_argument = ['John', 'Doe']
@@ -207,6 +199,7 @@ initial and returned lists are equivalent: True
 In this example we first created a list which is passed to function_to_modify_list as an argument. Inside the function, the parameter list_to_modify refers to the same list object as list_argument. The list is modified using the augmented operator '+=' which adds a new element to the existing list object. Because lists are mutable, the modification affects the original list object as well. Therefore the returned list and the original list_argument refer to the same object (they are identical), and consequently they are also equivalent (Downey, 2015, p.93, section 10.7, para. 3).
 """
 
+# endregion
 
 # Discussion Question: When you work with some data flow, where data is passed from one UI component to another one, in which cases you would prefer working with the same memory object, and in which cases you would copy the list?
 
